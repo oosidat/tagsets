@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Rf1-2y-X5y">
-                                <rect key="frame" x="20" y="80" width="560" height="104.5"/>
+                                <rect key="frame" x="20" y="80" width="560" height="105"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XoA-dC-9pS">
                                         <rect key="frame" x="0.0" y="0.0" width="75" height="21"/>
@@ -56,6 +56,10 @@
                             <constraint firstItem="Rf1-2y-X5y" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="m1o-id-oTI"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="oci-A0-SXE" id="UDu-p8-8K9"/>
+                        <outlet property="setNameLabel" destination="XoA-dC-9pS" id="W8c-hA-OJJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
