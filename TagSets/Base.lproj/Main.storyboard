@@ -25,7 +25,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="75" height="21"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter set name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oci-A0-SXE">
@@ -38,6 +38,9 @@
                                         <rect key="frame" x="0.0" y="74" width="151" height="30"/>
                                         <animations/>
                                         <state key="normal" title="Set Default Label Text"/>
+                                        <connections>
+                                            <action selector="setDefaultLabelText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vU8-P1-YLJ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <animations/>
@@ -57,8 +60,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="nameTextField" destination="oci-A0-SXE" id="UDu-p8-8K9"/>
-                        <outlet property="setNameLabel" destination="XoA-dC-9pS" id="W8c-hA-OJJ"/>
+                        <outlet property="tagsetLabelName" destination="XoA-dC-9pS" id="ZaB-ms-eRv"/>
+                        <outlet property="tagsetTextField" destination="oci-A0-SXE" id="l8M-iU-SGC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
