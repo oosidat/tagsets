@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		CB1552CB1C1B63AF00AAF1C3 /* TagSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1552CA1C1B63AF00AAF1C3 /* TagSet.swift */; };
 		CB1552CC1C1B63AF00AAF1C3 /* TagSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1552CA1C1B63AF00AAF1C3 /* TagSet.swift */; };
+		CB1552CE1C1B68AF00AAF1C3 /* TagSetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1552CD1C1B68AF00AAF1C3 /* TagSetTableViewCell.swift */; };
+		CB1552D01C1B6C3F00AAF1C3 /* TagSetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1552CF1C1B6C3F00AAF1C3 /* TagSetTableViewController.swift */; };
 		CBE9F5C41C15CBA3000E6915 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE9F5C31C15CBA3000E6915 /* AppDelegate.swift */; };
 		CBE9F5C61C15CBA3000E6915 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE9F5C51C15CBA3000E6915 /* ViewController.swift */; };
 		CBE9F5C91C15CBA3000E6915 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBE9F5C71C15CBA3000E6915 /* Main.storyboard */; };
@@ -29,6 +31,8 @@
 
 /* Begin PBXFileReference section */
 		CB1552CA1C1B63AF00AAF1C3 /* TagSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagSet.swift; sourceTree = "<group>"; };
+		CB1552CD1C1B68AF00AAF1C3 /* TagSetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagSetTableViewCell.swift; sourceTree = "<group>"; };
+		CB1552CF1C1B6C3F00AAF1C3 /* TagSetTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagSetTableViewController.swift; sourceTree = "<group>"; };
 		CBE9F5C01C15CBA3000E6915 /* TagSets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TagSets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBE9F5C31C15CBA3000E6915 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBE9F5C51C15CBA3000E6915 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +88,8 @@
 				CBE9F5C51C15CBA3000E6915 /* ViewController.swift */,
 				CB1552CA1C1B63AF00AAF1C3 /* TagSet.swift */,
 				CBE9F5C71C15CBA3000E6915 /* Main.storyboard */,
+				CB1552CF1C1B6C3F00AAF1C3 /* TagSetTableViewController.swift */,
+				CB1552CD1C1B68AF00AAF1C3 /* TagSetTableViewCell.swift */,
 				CBE9F5CA1C15CBA3000E6915 /* Assets.xcassets */,
 				CBE9F5CC1C15CBA3000E6915 /* LaunchScreen.storyboard */,
 				CBE9F5CF1C15CBA3000E6915 /* Info.plist */,
@@ -204,6 +210,8 @@
 				CBE9F5C61C15CBA3000E6915 /* ViewController.swift in Sources */,
 				CB1552CB1C1B63AF00AAF1C3 /* TagSet.swift in Sources */,
 				CBE9F5C41C15CBA3000E6915 /* AppDelegate.swift in Sources */,
+				CB1552D01C1B6C3F00AAF1C3 /* TagSetTableViewController.swift in Sources */,
+				CB1552CE1C1B68AF00AAF1C3 /* TagSetTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
