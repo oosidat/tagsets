@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6b2-hW-PUx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dFL-At-Crz">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Your Tag Sets-->
         <scene sceneID="hgH-cw-B3j">
             <objects>
-                <tableViewController id="6b2-hW-PUx" sceneMemberID="viewController">
+                <tableViewController id="6b2-hW-PUx" customClass="TagSetTableViewController" customModule="TagSets" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="BcI-Rd-R5G">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="TagSetTableViewCell" rowHeight="60" id="z9p-sd-RHt" customClass="TagSetTableViewCell" customModule="TagSets" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="600" height="60"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="z9p-sd-RHt" id="eqy-GW-RSa">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
@@ -25,15 +24,12 @@
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l11-9O-UUS">
                                             <rect key="frame" x="8" y="0.0" width="584" height="52"/>
-                                            <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <animations/>
                                 </tableViewCellContentView>
-                                <animations/>
                                 <connections>
                                     <outlet property="nameLabel" destination="l11-9O-UUS" id="Oep-uz-Dqb"/>
                                 </connections>
@@ -44,15 +40,22 @@
                             <outlet property="delegate" destination="6b2-hW-PUx" id="JFf-Vs-x7d"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Your Tag Sets" id="NVy-Mk-WRg">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="vng-pL-lUv">
+                            <connections>
+                                <segue destination="chr-PM-LRa" kind="presentation" identifier="AddItem" id="C1p-Ek-b7D"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ShA-zB-Kuu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-402" y="464"/>
+            <point key="canvasLocation" x="410" y="464"/>
         </scene>
-        <!--View Controller-->
+        <!--New Tag Set-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TagSets" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="TagSetViewController" customModule="TagSets" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -62,54 +65,85 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Rf1-2y-X5y">
-                                <rect key="frame" x="20" y="80" width="560" height="105"/>
+                                <rect key="frame" x="20" y="80" width="560" height="30"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XoA-dC-9pS">
-                                        <rect key="frame" x="0.0" y="0.0" width="75" height="21"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter set name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oci-A0-SXE">
-                                        <rect key="frame" x="0.0" y="33" width="560" height="30"/>
-                                        <animations/>
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fP7-vd-Fg0">
-                                        <rect key="frame" x="0.0" y="74" width="151" height="30"/>
-                                        <animations/>
-                                        <state key="normal" title="Set Default Label Text"/>
-                                        <connections>
-                                            <action selector="setDefaultLabelText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vU8-P1-YLJ"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="oci-A0-SXE" secondAttribute="trailing" id="fsb-Ce-Kzw"/>
                                     <constraint firstItem="oci-A0-SXE" firstAttribute="leading" secondItem="Rf1-2y-X5y" secondAttribute="leading" id="rQ9-lt-Ugw"/>
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="Rf1-2y-X5y" secondAttribute="trailing" id="BKi-J7-6ZA"/>
-                            <constraint firstItem="Rf1-2y-X5y" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="aUe-5c-bad"/>
-                            <constraint firstItem="Rf1-2y-X5y" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="lcm-hN-hBf"/>
+                            <constraint firstItem="Rf1-2y-X5y" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="aUe-5c-bad"/>
+                            <constraint firstItem="Rf1-2y-X5y" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="lcm-hN-hBf"/>
                             <constraint firstItem="Rf1-2y-X5y" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="m1o-id-oTI"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="New Tag Set" id="gpm-Yd-YGX">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="rx7-WD-dEN">
+                            <connections>
+                                <action selector="cancel:" destination="BYZ-38-t0r" id="S6E-Lh-uON"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="9AF-8a-qTq">
+                            <connections>
+                                <segue destination="ay9-v1-hQq" kind="unwind" unwindAction="unwindToTagSetList:" id="mXM-U2-hkf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="tagsetLabelName" destination="XoA-dC-9pS" id="ZaB-ms-eRv"/>
+                        <outlet property="saveButton" destination="9AF-8a-qTq" id="l4m-6u-glZ"/>
                         <outlet property="tagsetTextField" destination="oci-A0-SXE" id="l8M-iU-SGC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="ay9-v1-hQq" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="321" y="464"/>
+            <point key="canvasLocation" x="1945" y="464"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kon-B5-D65">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dFL-At-Crz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Idg-0F-qBc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6b2-hW-PUx" kind="relationship" relationship="rootViewController" id="0Sd-nG-3cG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G9d-cz-JRO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-402" y="464"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="IJl-vQ-XsC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="chr-PM-LRa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hNs-Q1-JSd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="y81-qd-EkP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5K5-td-Clt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1133" y="464"/>
         </scene>
     </scenes>
 </document>
