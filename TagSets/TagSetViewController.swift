@@ -23,6 +23,11 @@ class TagSetViewController: UIViewController, UITextFieldDelegate {
         // Handle text field's user input through delegate callbacks
         tagsetTextField.delegate = self
         
+        if let tagSet = tagSet {
+            navigationItem.title = tagSet.name
+            tagsetTextField.text = tagSet.name
+        }
+        
         checkValidTagSetName()
     }
     
@@ -51,7 +56,14 @@ class TagSetViewController: UIViewController, UITextFieldDelegate {
     // MARK: Navigation
     
     @IBAction func cancel(sender: UIBarButtonItem) {
-        dismissViewControllerAnimated(true, completion: nil)
+        let isPresentingInAddTagSetMode = presentingViewController is UINavigationController
+        
+        if isPresentingInAddTagSetMode {
+            dismissViewControllerAnimated(true, completion: nil)
+        }
+        else {
+            navigationController!.popViewControllerAnimated(true)
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

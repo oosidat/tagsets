@@ -32,6 +32,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="nameLabel" destination="l11-9O-UUS" id="Oep-uz-Dqb"/>
+                                    <segue destination="BYZ-38-t0r" kind="showDetail" identifier="ShowDetail" action="showViewController:sender:" id="DSK-f8-xo4"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -50,7 +51,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ShA-zB-Kuu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="410" y="464"/>
+            <point key="canvasLocation" x="423" y="438"/>
         </scene>
         <!--New Tag Set-->
         <scene sceneID="tne-QT-ifu">
@@ -107,7 +108,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="ay9-v1-hQq" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1945" y="464"/>
+            <point key="canvasLocation" x="1855" y="438"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kon-B5-D65">
@@ -143,7 +144,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5K5-td-Clt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1133" y="464"/>
+            <point key="canvasLocation" x="1147" y="789"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="DSK-f8-xo4"/>
+    </inferredMetricsTieBreakers>
 </document>

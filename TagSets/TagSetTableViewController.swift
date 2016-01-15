@@ -16,8 +16,22 @@ class TagSetTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.leftBarButtonItem = editButtonItem()
         
         loadSampleTagSets()
+    }
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            tagSets.removeAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        } else if editingStyle == .Insert {
+            
+        }
+    }
+    
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -47,13 +61,38 @@ class TagSetTableViewController: UITableViewController {
         tagSets += [set1, set2, set3]
     }
     
+    // MARK: Navigation
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ShowDetail" {
+            let tagSetDetailViewController = segue.destinationViewController as! TagSetViewController
+            if let selectedTagSetCell = sender as? TagSetTableViewCell {
+                let indexPath = tableView.indexPathForCell(selectedTagSetCell)!
+                let selectedTagSet = tagSets[indexPath.row]
+                tagSetDetailViewController.tagSet = selectedTagSet
+            }
+            
+        }
+        else if segue.identifier == "AddItem" {
+            print("Adding new tagset")
+            
+        }
+    }
+    
     // MARK: Actions
     
     @IBAction func unwindToTagSetList(sender: UIStoryboardSegue) {
         if let sourceViewController = sender.sourceViewController as? TagSetViewController, tagSet = sourceViewController.tagSet {
-            let newIndexPath = NSIndexPath(forRow: tagSets.count, inSection: 0)
-            tagSets.append(tagSet)
-            tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
+            
+            if let selectedIndexPath = tableView.indexPathForSelectedRow {
+                tagSets[selectedIndexPath.row] = tagSet
+                tableView.reloadRowsAtIndexPaths([selectedIndexPath], withRowAnimation: .None)
+            }
+            else {
+                let newIndexPath = NSIndexPath(forRow: tagSets.count, inSection: 0)
+                tagSets.append(tagSet)
+                tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
+            }
         }
     }
 
